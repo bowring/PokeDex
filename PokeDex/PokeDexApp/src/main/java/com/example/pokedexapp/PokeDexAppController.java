@@ -38,10 +38,10 @@ public class PokeDexAppController {
     private HashMap<String, String> pokeNames = new HashMap<>();
 
     public PokeDexAppController() {
-        pokeNames.put("bulbasaur", "C:\\Users\\redfl\\Desktop\\CIRDLES\\Pokemon\\bulbasaur.png");
-        pokeNames.put("charmander", "C:\\Users\\redfl\\Desktop\\CIRDLES\\Pokemon\\charmander.png");
-        pokeNames.put("squirtle", "C:\\Users\\redfl\\Desktop\\CIRDLES\\Pokemon\\squirtle.png");
-        pokeNames.put("pikachu", "C:\\Users\\redfl\\Desktop\\CIRDLES\\Pokemon\\pikachu.png");
+        pokeNames.put("bulbasaur", "C:\\Users\\redfl\\Desktop\\CIRDLES\\PokeDex\\PokeDex\\PokeDexApp\\PokeDex Resources\\bulbasaur.png");
+        pokeNames.put("charmander", "C:\\Users\\redfl\\Desktop\\CIRDLES\\PokeDex\\PokeDex\\PokeDexApp\\PokeDex Resources\\charmander.png");
+        pokeNames.put("squirtle", "C:\\Users\\redfl\\Desktop\\CIRDLES\\PokeDex\\PokeDex\\PokeDexApp\\PokeDex Resources\\squirtle.png");
+        pokeNames.put("pikachu", "C:\\Users\\redfl\\Desktop\\CIRDLES\\PokeDex\\PokeDex\\PokeDexApp\\PokeDex Resources\\pikachu.png");
 
         stage = new Stage();
     }

@@ -12,7 +12,7 @@ public class PokeDexApp extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(PokeDexApp.class.getResource("pokedex.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 400, 450);
-        stage.setTitle("Hello!");
+        stage.setTitle("PokeDex");
         stage.setScene(scene);
         stage.show();
     }
