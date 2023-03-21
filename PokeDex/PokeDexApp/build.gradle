@@ -22,8 +22,8 @@ tasks.withType(JavaCompile) {
 }
 
 application {
-    mainModule = 'com.example.pokedexapp'
-    mainClass = 'com.example.pokedexapp.HelloApplication'
+    mainModule = 'com.example.pokedex'
+    mainClass = 'com.example.pokedexapp.PokeDexApp'
 }
 
 dependencies {

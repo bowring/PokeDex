@@ -1,4 +1,3 @@
 rootProject.name = 'PokeDex'
-include 'PokeDexApp'
-include 'PokeDexCore'
+include ("PokeDexApp", "PokeDexCore")
 

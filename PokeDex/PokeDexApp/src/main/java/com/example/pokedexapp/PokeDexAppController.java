@@ -13,28 +13,37 @@ import java.io.File;
 import java.util.HashMap;
 
 public class PokeDexAppController {
+
+    /* Stages */
     private Stage stage;
+
+    /* Text Fields */
     @FXML
     private TextField nameField;
 
-    @FXML
-    private String name;
-
+    /* Labels */
     @FXML
     private Label testLabel;
 
+    /* Buttons */
     @FXML
     private Button showBtn;
-
     @FXML
     private Button pickBtn;
 
+    /* Images and ImageViews */
     @FXML
     private ImageView pokemon;
-
     @FXML
     private Image pokeImage;
 
+    /* Strings */
+    @FXML
+    private String name;
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Non-FXML Variables~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+    /* Hashmaps */
     private HashMap<String, String> pokeNames = new HashMap<>();
 
     public PokeDexAppController() {
@@ -46,20 +55,27 @@ public class PokeDexAppController {
         stage = new Stage();
     }
 
+    /**
+     * Event that shows the image and name of the Pokemon given the name from the Text Field
+     */
     @FXML
     private void showPokemon() {
-        name = nameField.getText();
+        name = nameField.getText().toLowerCase();
         pokeImage = new Image(pokeNames.get(name));
         pokemon.setImage(pokeImage);
-        testLabel.setText(name);
+        testLabel.setText(createName(name));
     }
+
+    /**
+     * Event that shows the image and name of the Pokemon given the location from the File Chooser
+     */
     @FXML
     private void pickPokemon() {
         FileChooser fileChooser = new FileChooser();
         File file = fileChooser.showOpenDialog(stage);
 
         if (file != null) {
-            testLabel.setText(removeExtension(file.getName()));
+            testLabel.setText(createName(file.getName()));
             pokeImage = new Image(file.getAbsolutePath());
             pokemon.setImage(pokeImage);
         }
@@ -68,5 +84,28 @@ public class PokeDexAppController {
         }
     }
 
-    private String removeExtension (String filename) { return filename.split("\\.")[0]; }
+    /**
+     * Corrects the format of the name (capitalization, extensions, etc.)
+     * @param filename
+     * @return Corrected name as a String
+     */
+    private String createName (String filename) {
+        String name;
+        if (filename.contains(".")) {
+            name = removeExtension(filename);
+        }
+        else {
+            name = filename;
+        }
+        return name.substring(0,1).toUpperCase() + name.substring(1);
+    }
+
+    /**
+     * Removes the file extension from a file's name
+     * @param filename
+     * @return The title of the file without the extension
+     */
+    private String removeExtension (String filename) {
+        return filename.split("\\.")[0];
+    }
 }
