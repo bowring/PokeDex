@@ -19,7 +19,9 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$/PokeDexApp" />
         <option name="modules">
           <set>
+            <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/PokeDexApp" />
+            <option value="$PROJECT_DIR$/PokeDexCore" />
           </set>
         </option>
       </GradleProjectSettings>

@@ -1,0 +1,78 @@
+*.class
+
+# local helpers
+run
+run.sh
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# Gradle
+.gradle/
+build/
+
+# Maven
+target/
+
+# Netbeans
+nb-configuration.xml
+nbactions.xml
+dependency-reduced-pom.xml
+nbproject/
+.nb-gradle/
+.nb-gradle-properties
+private/
+
+
+# IntelliJ
+.idea/
+*.iml
+!.idea/gradle.xml
+
+# Generated
+*.txt
+*.html
+*.xml
+*.csv
+test_*
+*.ser
+*.zip
+*.trip
+*.xls
+*.pdf
+*.png
+*.svg
+PokeDexResources/
+*.TIMSAM
+
+META-INF/
+
+# Resources
+!PokeDexApp/src/main/resources/com/example/pokedexapp/css/*.css
+# !TripoliApp/src/main/resources/org/cirdles/tripoli/gui/images/*.png
+
+# data files
+
+# Developer docs
+
+
+# webpage via pages
+
+
+# Testing resources
+
+!gradle/wrapper/gradle-wrapper.jar
+
+
+# MACOS
+.DS_Store
+# WINOS
+Thumbs.db

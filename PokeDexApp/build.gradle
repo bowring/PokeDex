@@ -8,6 +8,10 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    maven {
+        url 'https://repo.clojars.org'
+        name 'Clojars'
+    }
 }
 
 ext {
@@ -22,16 +26,21 @@ tasks.withType(JavaCompile) {
 }
 
 application {
-    mainModule = 'com.example.pokedexapp'
     mainClass = 'com.example.pokedexapp.PokeDexApp'
 }
 
 dependencies {
+    implementation project(":PokeDexCore")
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+
 }
 
 test {
     useJUnitPlatform()
+}
+
+task prepareKotlinBuildScriptModel {
+
 }

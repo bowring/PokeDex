@@ -5,75 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36631c6d-b580-4c38-9530-e46c17e7813c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexApp/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexApp/PokeDex Resources/CSV Files/PokemonDatabase.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexApp/PokeDex Resources/Images/Pokemon Shapes/48px-Body01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexApp/PokeDex Resources/Images/Pokemon Shapes/48px-Body02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexApp/PokeDex Resources/Images/Pokemon Shapes/48px-Body03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexApp/PokeDex Resources/Images/Pokemon Shapes/48px-Body04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexApp/PokeDex Resources/Images/Pokemon Shapes/48px-Body05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexApp/PokeDex Resources/Images/Pokemon Shapes/48px-Body06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexApp/PokeDex Resources/Images/Pokemon Shapes/48px-Body07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexApp/PokeDex Resources/Images/Pokemon Shapes/48px-Body08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexApp/PokeDex Resources/Images/Pokemon Shapes/48px-Body09.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexApp/PokeDex Resources/Images/Pokemon Shapes/48px-Body10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexApp/PokeDex Resources/Images/Pokemon Shapes/48px-Body11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexApp/PokeDex Resources/Images/Pokemon Shapes/48px-Body12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexApp/PokeDex Resources/Images/Pokemon Shapes/48px-Body13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexApp/PokeDex Resources/Images/Pokemon Shapes/48px-Body14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexApp/PokeDex Resources/Images/Pokemon/bulbasaur.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexApp/PokeDex Resources/Images/Pokemon/charmander.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexApp/PokeDex Resources/Images/Pokemon/pikachu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexApp/PokeDex Resources/Images/Pokemon/squirtle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexApp/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexApp/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexApp/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexApp/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexApp/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexApp/src/main/java/com/example/pokedexapp/PokeDexApp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexApp/src/main/java/com/example/pokedexapp/PokeDexAppController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexApp/src/main/java/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexApp/src/main/resources/com/example/pokedexapp/css/dexcss.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexApp/src/main/resources/com/example/pokedexapp/pokedex.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexCore/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexCore/build/classes/java/main/org/example/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexCore/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokeDexCore/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokeDexCore/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PokeDexCore/src/main/java/org/example/Pokemon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ProjectThree/src/main/java/org/example/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ProjectThree/src/main/java/org/example/Cylinder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ProjectThree/src/main/java/org/example/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ProjectThree/src/main/java/org/example/ShapeTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/7.4/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/7.4/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/7.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/7.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PokeDexApp/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../PokeDexApp/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PokeDexApp/src/main/java/com/example/pokedexapp/PokeDexAppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PokeDexApp/src/main/java/com/example/pokedexapp/PokeDexAppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PokeDexApp/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PokeDexApp/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PokeDexCore/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../PokeDexCore/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,6 +81,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "liberica-17 (2)",
@@ -149,6 +103,13 @@
       <recent name="C:\Users\redfl\Desktop\CIRDLES\PokeDex\PokeDex\PokeDexApp\PokeDex Resources\Images\Pokemon" />
       <recent name="C:\Users\redfl\Desktop\CIRDLES\PokeDex\PokeDex\PokeDexApp\PokeDex Resources\Images" />
     </key>
+  </component>
+  <component name="RubyModuleManagerSettings">
+    <option name="blackListedRootsPaths">
+      <list>
+        <option value="$PROJECT_DIR$" />
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Application.PokeDexApp">
     <configuration name="PokeDexApp (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -196,6 +157,7 @@
       <workItem from="1679584041080" duration="1741000" />
       <workItem from="1679596729388" duration="845000" />
       <workItem from="1679941501596" duration="790000" />
+      <workItem from="1680130632268" duration="49000" />
     </task>
     <servers />
   </component>

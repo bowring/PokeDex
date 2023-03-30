@@ -1,6 +1,7 @@
 package com.example.pokedexapp;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -8,11 +9,14 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import com.example.pokedexcore.Pokemon;
 
 import java.io.File;
+import java.net.URL;
 import java.util.HashMap;
+import java.util.ResourceBundle;
 
-public class PokeDexAppController {
+public class PokeDexAppController implements Initializable {
 
     /* Stages */
     private Stage stage;
@@ -46,7 +50,12 @@ public class PokeDexAppController {
     /* Hashmaps */
     private HashMap<String, String> pokeNames = new HashMap<>();
 
-    public PokeDexAppController() {
+    @FXML
+    public void initialize(URL location, ResourceBundle resources) {
+        Pokemon myPoke = new Pokemon();
+
+        nameField.setText("asdf");
+
         pokeNames.put("bulbasaur", "C:\\Users\\redfl\\Desktop\\CIRDLES\\PokeDex\\PokeDex\\PokeDexApp\\PokeDex Resources\\Images\\Pokemon\\bulbasaur.png");
         pokeNames.put("charmander", "C:\\Users\\redfl\\Desktop\\CIRDLES\\PokeDex\\PokeDex\\PokeDexApp\\PokeDex Resources\\Images\\Pokemon\\charmander.png");
         pokeNames.put("squirtle", "C:\\Users\\redfl\\Desktop\\CIRDLES\\PokeDex\\PokeDex\\PokeDexApp\\PokeDex Resources\\Images\\Pokemon\\squirtle.png");
