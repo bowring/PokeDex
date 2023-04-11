@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'application'
+    id("de.jjohannes.extra-java-module-info") version "0.14"
 }
 
 group 'com.example'
@@ -11,6 +12,9 @@ repositories {
     maven {
         url 'https://repo.clojars.org'
         name 'Clojars'
+    }
+    maven {
+        url "https://jitpack.io"
     }
 }
 
@@ -32,6 +36,8 @@ application {
 dependencies {
     implementation project(":PokeDexCore")
 
+    implementation("com.github.cirdles:commons:bc38781605")
+
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 
@@ -39,6 +45,11 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+extraJavaModuleInfo {
+    failOnMissingModuleInfo.set(false)
+    automaticModule("commons-bc38781605.jar", "commons.bc38781605")
 }
 
 task prepareKotlinBuildScriptModel {

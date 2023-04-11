@@ -11,6 +11,8 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import com.example.pokedexcore.Pokemon;
 
+import org.cirdles.commons.util.ResourceExtractor;
+
 import java.io.File;
 import java.net.URL;
 import java.util.HashMap;
@@ -54,14 +56,42 @@ public class PokeDexAppController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         Pokemon myPoke = new Pokemon();
 
-        nameField.setText("asdf");
+        initializePokemon();
 
-        pokeNames.put("bulbasaur", "C:\\Users\\redfl\\Desktop\\CIRDLES\\PokeDex\\PokeDex\\PokeDexApp\\PokeDex Resources\\Images\\Pokemon\\bulbasaur.png");
-        pokeNames.put("charmander", "C:\\Users\\redfl\\Desktop\\CIRDLES\\PokeDex\\PokeDex\\PokeDexApp\\PokeDex Resources\\Images\\Pokemon\\charmander.png");
-        pokeNames.put("squirtle", "C:\\Users\\redfl\\Desktop\\CIRDLES\\PokeDex\\PokeDex\\PokeDexApp\\PokeDex Resources\\Images\\Pokemon\\squirtle.png");
-        pokeNames.put("pikachu", "C:\\Users\\redfl\\Desktop\\CIRDLES\\PokeDex\\PokeDex\\PokeDexApp\\PokeDex Resources\\Images\\Pokemon\\pikachu.png");
+        //createValue("jalen");
+
+        nameField.setText("Jalen");
 
         stage = new Stage();
+    }
+
+    private void initializePokemon() {
+        String bulbasaurRef = "bulbasaur.png";
+        File bulbasaurFile = fetchImage(bulbasaurRef);
+        //File bulbasaurFile = fetchImage("bulbasaur.png");
+        pokeNames.put("bulbasaur", bulbasaurFile.getAbsolutePath());
+
+        pokeNames.put("charmander", fetchImage("charmander.png").getAbsolutePath());
+
+//        pokeNames.put("bulbasaur", "C:\\Users\\redfl\\Desktop\\CIRDLES\\PokeDex\\PokeDex\\PokeDexApp\\PokeDex Resources\\Images\\Pokemon\\bulbasaur.png");
+//        pokeNames.put("charmander", "C:\\Users\\redfl\\Desktop\\CIRDLES\\PokeDex\\PokeDex\\PokeDexApp\\PokeDex Resources\\Images\\Pokemon\\charmander.png");
+//        pokeNames.put("squirtle", "C:\\Users\\redfl\\Desktop\\CIRDLES\\PokeDex\\PokeDex\\PokeDexApp\\PokeDex Resources\\Images\\Pokemon\\squirtle.png");
+//        pokeNames.put("pikachu", "C:\\Users\\redfl\\Desktop\\CIRDLES\\PokeDex\\PokeDex\\PokeDexApp\\PokeDex Resources\\Images\\Pokemon\\pikachu.png");
+
+        //pokeNames.put("steelix", filename)
+    }
+
+//    private String createValue(String name) {
+//        name = name.toLowerCase();
+//
+//        fetchImage(name + ".png").getAbsolutePath();
+//
+//        return name;
+//    }
+
+    private File fetchImage(String filename) {
+        ResourceExtractor imgExtractor = new ResourceExtractor(PokeDexApp.class);
+        return imgExtractor.extractResourceAsFile("com/example/pokedexapp/images/Pokemon/" + filename);
     }
 
     /**
