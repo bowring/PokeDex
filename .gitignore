@@ -48,9 +48,7 @@ test_*
 *.trip
 *.xls
 *.pdf
-*.png
 *.svg
-PokeDexResources/
 *.TIMSAM
 
 META-INF/
