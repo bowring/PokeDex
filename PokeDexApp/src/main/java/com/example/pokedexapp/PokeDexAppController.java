@@ -16,7 +16,9 @@ import org.cirdles.commons.util.ResourceExtractor;
 import java.io.File;
 import java.net.URL;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.ResourceBundle;
+import java.util.Set;
 
 public class PokeDexAppController implements Initializable {
 
@@ -50,7 +52,7 @@ public class PokeDexAppController implements Initializable {
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Non-FXML Variables~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
     /* Hashmaps */
-    private HashMap<String, String> pokeNames = new HashMap<>();
+    private Set<String> pokeFilenames = new HashSet<>();
 
     @FXML
     public void initialize(URL location, ResourceBundle resources) {
@@ -58,31 +60,32 @@ public class PokeDexAppController implements Initializable {
 
         initializePokemon();
 
-        //createValue("bulbasaur");
-
-        nameField.setText("Jalen");
-
         stage = new Stage();
     }
 
     private void initializePokemon() {
-        String bulbasaurRef = "bulbasaur.png";
-        File bulbasaurFile = fetchImage("bulbasaur.png");
-        //pokeNames.put("bulbasaur", "/com/example/pokedexapp/images/Pokemon/bulbasaur.png");
-        pokeNames.put("bulbasaur", bulbasaurFile.getAbsolutePath());
+        addPokemon("bulbasaur");
+        addPokemon("charmander");
+        addPokemon("squirtle");
+        addPokemon("pikachu");
     }
 
-//    private String createValue(String name) {
-//        name = name.toLowerCase();
-//
-//        fetchImage(name + ".png").getAbsolutePath();
-//
-//        return name;
-//    }
+    /**
+     * Adds Pokemon to the pokeFilenames Set
+     * @param pokemon name of wanted Pokemon
+     */
+    public void addPokemon(String pokemon) {
+        pokeFilenames.add(pokemon + ".png");
+    }
 
+    /**
+     * Fetches the resources for an image
+     * @param filename name of the targeted file
+     * @return the targeted resources
+     */
     private File fetchImage(String filename) {
         ResourceExtractor imgExtractor = new ResourceExtractor(PokeDexApp.class);
-        return imgExtractor.extractResourceAsFile("/com/example/pokedexapp/images/pokemonSprites/bulbasaur.png");
+        return imgExtractor.extractResourceAsFile("/com/example/pokedexapp/images/pokemonSprites/" + filename);
     }
 
     /**
@@ -90,10 +93,19 @@ public class PokeDexAppController implements Initializable {
      */
     @FXML
     private void showPokemon() {
-        name = nameField.getText().toLowerCase();
-        pokeImage = new Image(pokeNames.get(name));
+        name = nameField.getText().toLowerCase() + ".png";
+
+        if (pokeFilenames.contains(name)) {
+            pokeImage = new Image(fetchImage(name).getAbsolutePath());
+            testLabel.setText(createName(name));
+        }
+        else {
+            pokeImage = null;
+            testLabel.setText("No Pokemon Found With That Name");
+        }
+
         pokemon.setImage(pokeImage);
-        testLabel.setText(createName(name));
+
     }
 
     /**
