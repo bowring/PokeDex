@@ -82,7 +82,7 @@ public class PokeDexAppController implements Initializable {
 
     private File fetchImage(String filename) {
         ResourceExtractor imgExtractor = new ResourceExtractor(PokeDexApp.class);
-        return imgExtractor.extractResourceAsFile("/com/example/pokedexapp/images/Pokemon/bulbasaur.png");
+        return imgExtractor.extractResourceAsFile("/com/example/pokedexapp/images/pokemonSprites/bulbasaur.png");
     }
 
     /**
