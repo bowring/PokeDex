@@ -5,55 +5,44 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Pokemon implements Comparable<Pokemon> {
 
     //Declaring the descriptive variables for the Pokemon object
-    private final int level;
-    private final String type;
-    private final double height;
-    private final double weight;
+    private final String NAME;
+    private final String TYPE;
+    private final String ABILITIES;
+    private final double HEIGHT;
+    private final double WEIGHT;
+    private final String SHAPE;
+    private final String COLOR;
+    private final String DESCRIPTION;
 
     public Pokemon() {
-        this(0, "", 0.0, 0.0);
-        System.out.println("bruh");
+        this("", "", "", 0.0, 0.0, "", "", "");
     }
 
-    public Pokemon(int level, String type, double height, double weight) {
-
-        //Intializing the descriptive variables for the Pokemon object
-        this.level = level;
-        this.type = type;
-        this.height = height;
-        this.weight = weight;
-
+    public Pokemon(String name, String type, String abilities, double height, double weight, String shape, String color, String description) {
+        this.NAME = name;
+        this.TYPE = type;
+        this.ABILITIES = abilities;
+        this.HEIGHT = height;
+        this.WEIGHT = weight;
+        this.SHAPE = shape;
+        this.COLOR = color;
+        this.DESCRIPTION = description;
     }
 
     //Method that writes the components of the object to a csv file
-    public static void serializeToCSV(List<Pokemon> pokeList, String filename)
+    public void serializeToCSV(Pokemon poke, String filename)
             throws IOException {
 
         //Creates a path to access the file
         Path pokedex = Paths.get(filename);
 
-        String newLine = System.lineSeparator();
-        byte[] byteLine = newLine.getBytes();
-
-        String blank = "";
-        byte[] blankBytes = blank.getBytes();
-
-        //Clears the csv file
-        Files.write(pokedex, "".getBytes());
-
-        Collections.sort(pokeList);
-
         //Writes the attributes of the different objects in the list to file
-        for (Pokemon poke : pokeList) {
-            Files.write(pokedex, poke.printToCSV().getBytes(), StandardOpenOption.APPEND);
-        }
+        Files.write(pokedex, poke.printToCSV().getBytes(), StandardOpenOption.APPEND);
 
     }
 
@@ -69,31 +58,39 @@ public class Pokemon implements Comparable<Pokemon> {
     }
 
     //Takes the data from filename and then applies it to another new object
-    public static List<Pokemon> deserializePokemon(String filename) throws IOException {
+    public Set<Pokemon> deserializePokemon(String filename) throws IOException {
 
-        List<Pokemon> pokeList = new ArrayList<>();
+        Set<Pokemon> pokeList = new HashSet<>();
 
         Path pokedex = Paths.get(filename);
 
         List<String> data = Files.readAllLines(pokedex);
+        data.remove(0);
 
         String[] dataParts = {};
 
         for (String line : data) {
             dataParts = line.split(",");
 
-            pokeList.add(new Pokemon(Integer.parseInt(dataParts[0].trim()), dataParts[1].trim(), Double.parseDouble(dataParts[2].trim()), Double.parseDouble(dataParts[3].trim())));
+            pokeList.add(new Pokemon(dataParts[0].trim(), //NAME
+                                     dataParts[1].trim(), //TYPE
+                                     dataParts[2].trim(), //ABILITIES
+                                     Double.parseDouble(dataParts[3].trim()), //HEIGHT
+                                     Double.parseDouble(dataParts[4].trim()), //WEIGHT
+                                     dataParts[5].trim(), //SHAPE
+                                     dataParts[6].trim(), //COLOR
+                                     dataParts[7].trim())); //DESCRIPTION
         }
 
         return pokeList;
     }
 
     public String printToCSV() {
-        return ("" + level + "," + type + "," + height + "," + weight + "\n");
+        return ("" + NAME + "," + TYPE + "," + ABILITIES + "," + HEIGHT + "," + WEIGHT + "," + SHAPE + "," + COLOR + "," + DESCRIPTION + "\n");
     }
 
     //Checks to see if the new Pokemon object is equal to the original one
-    @Override
+    /*@Override
     public boolean equals(Object poke) {
 
         if (poke == this) {
@@ -111,23 +108,6 @@ public class Pokemon implements Comparable<Pokemon> {
         return ((this.level == other.level) && (this.height == other.height)) && ((this.weight == other.weight) && typeEquals);
     }
 
-    //Getters
-    public int getLevel() {
-        return level;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public double getHeight() {
-        return height;
-    }
-
-    public double getWeight() {
-        return weight;
-    }
-
     @Override
     public int compareTo (Pokemon other) {
 
@@ -140,8 +120,34 @@ public class Pokemon implements Comparable<Pokemon> {
                         ((Double.compare(this.height, other.height)) >= 0);
 
         return same ? 0 : greater ? 1 : -1;
+    }*/
+
+    //Getters
+    public String getNAME() {
+        return NAME;
+    }
+    public String getTYPE() {
+        return TYPE;
+    }
+    public double getHEIGHT() {
+        return HEIGHT;
+    }
+    public double getWEIGHT() {
+        return WEIGHT;
+    }
+    public String getSHAPE() {
+        return SHAPE;
+    }
+    public String getCOLOR() {
+        return COLOR;
+    }
+    public String getDESCRIPTION() {
+        return DESCRIPTION;
     }
 
 
-
+    @Override
+    public int compareTo(Pokemon o) {
+        return 0;
+    }
 }

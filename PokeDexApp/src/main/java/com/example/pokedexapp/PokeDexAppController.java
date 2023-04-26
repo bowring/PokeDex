@@ -14,11 +14,9 @@ import com.example.pokedexcore.Pokemon;
 import org.cirdles.commons.util.ResourceExtractor;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.ResourceBundle;
-import java.util.Set;
+import java.util.*;
 
 public class PokeDexAppController implements Initializable {
 
@@ -41,33 +39,53 @@ public class PokeDexAppController implements Initializable {
 
     /* Images and ImageViews */
     @FXML
-    private ImageView pokemon;
+    private ImageView pokemonWindow;
     @FXML
     private Image pokeImage;
 
-    /* Strings */
-    @FXML
-    private String name;
-
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Non-FXML Variables~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-    /* Hashmaps */
+    /* Sets */
     private Set<String> pokeFilenames = new HashSet<>();
 
+    private Set<Pokemon> pokemon = new HashSet<>();
+
     @FXML
-    public void initialize(URL location, ResourceBundle resources) {
-        Pokemon myPoke = new Pokemon();
+    public void initialize(URL location, ResourceBundle resources)  {
+        Pokemon poke = new Pokemon();
+
+        pokemon = startPokeDex();
+
+        for (Pokemon p : pokemon) {
+            System.out.println(p.printToCSV());
+        }
 
         initializePokemon();
 
         stage = new Stage();
     }
 
+    /**
+     * Adds the pre-made Pokemon
+     */
     private void initializePokemon() {
         addPokemon("bulbasaur");
         addPokemon("charmander");
         addPokemon("squirtle");
         addPokemon("pikachu");
+    }
+
+    public Set<Pokemon> startPokeDex() {
+        Pokemon poke = new Pokemon();
+        Set<Pokemon> list;
+
+        try {
+            list = poke.deserializePokemon(fetchCSV("pokemonDatabase.csv").getAbsolutePath());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        return list;
     }
 
     /**
@@ -85,7 +103,17 @@ public class PokeDexAppController implements Initializable {
      */
     private File fetchImage(String filename) {
         ResourceExtractor imgExtractor = new ResourceExtractor(PokeDexApp.class);
-        return imgExtractor.extractResourceAsFile("/com/example/pokedexapp/images/pokemonSprites/" + filename);
+        if (filename.contains("body")) {
+            return imgExtractor.extractResourceAsFile("/com/example/pokedexapp/images/pokemonShapes/" + filename);
+        }
+        else {
+            return imgExtractor.extractResourceAsFile("/com/example/pokedexapp/images/pokemonSprites/" + filename);
+        }
+    }
+
+    public File fetchCSV(String filename) {
+        ResourceExtractor fileExtractor = new ResourceExtractor(PokeDexApp.class);
+        return fileExtractor.extractResourceAsFile("/com/example/pokedexapp/csvFiles/" + filename);
     }
 
     /**
@@ -93,9 +121,10 @@ public class PokeDexAppController implements Initializable {
      */
     @FXML
     private void showPokemon() {
-        name = nameField.getText().toLowerCase() + ".png";
+        String name = nameField.getText().toLowerCase();
 
-        if (pokeFilenames.contains(name)) {
+        if (containsPokemon(pokemon, name)) {
+            name += ".png";
             pokeImage = new Image(fetchImage(name).getAbsolutePath());
             testLabel.setText(createName(name));
         }
@@ -104,7 +133,7 @@ public class PokeDexAppController implements Initializable {
             testLabel.setText("No Pokemon Found With That Name");
         }
 
-        pokemon.setImage(pokeImage);
+        pokemonWindow.setImage(pokeImage);
 
     }
 
@@ -119,11 +148,21 @@ public class PokeDexAppController implements Initializable {
         if (file != null) {
             testLabel.setText(createName(file.getName()));
             pokeImage = new Image(file.getAbsolutePath());
-            pokemon.setImage(pokeImage);
+            pokemonWindow.setImage(pokeImage);
         }
         else {
             testLabel.setText("Nothing new was selected");
         }
+    }
+
+    public boolean containsPokemon(Set<Pokemon> pokemon, String name) {
+        for (Pokemon p : pokemon) {
+            if (p.getNAME().equals(name)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     /**
