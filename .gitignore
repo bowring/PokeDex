@@ -51,6 +51,8 @@ test_*
 *.svg
 *.TIMSAM
 
+build/compile/java
+
 META-INF/
 
 # Resources
