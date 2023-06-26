@@ -56,6 +56,9 @@ META-INF/
 
 # Resources
 !PokeDexApp/src/main/resources/com/example/pokedexapp/css/*.css
+!PokeDexCore/src/main/resources/com/example/pokedexcore/csvFiles/*.txt
+!PokeDexCore/src/main/resources/com/example/pokedexcore/images/pokemonShapes/*.txt
+!PokeDexCore/src/main/resources/com/example/pokedexcore/images/pokemonSprites/*.txt
 # !TripoliApp/src/main/resources/org/cirdles/tripoli/gui/images/*.png
 
 # data files

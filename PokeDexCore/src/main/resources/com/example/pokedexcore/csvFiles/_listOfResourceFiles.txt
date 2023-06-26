@@ -1,0 +1,2 @@
+_README.txt
+pokemonDatabase.csv
