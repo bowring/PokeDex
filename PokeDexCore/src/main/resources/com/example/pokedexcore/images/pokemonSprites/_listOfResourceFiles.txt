@@ -1,4 +1,4 @@
-README.txt
+_README.txt
 bulbasaur.png
 ivysaur.png
 venusaur.png

@@ -24,38 +24,26 @@ public enum PokeDexFileResources {
             throw new IOException();
         }
 
-        if(CSV_FOLDER.exists()) {
-            FileUtilities.recursiveDelete(CSV_FOLDER.toPath());
-        }
         if(!CSV_FOLDER.mkdir()) {
             throw new IOException();
         }
 
-        if(IMAGE_FOLDER.exists()) {
-            FileUtilities.recursiveDelete(CSV_FOLDER.toPath());
-        }
         if(!IMAGE_FOLDER.mkdir()) {
             throw new IOException();
         }
 
-        if(POKEMON_SHAPES.exists()) {
-            FileUtilities.recursiveDelete(POKEMON_SHAPES.toPath());
-        }
         if(!POKEMON_SHAPES.mkdir()) {
             throw new IOException();
         }
 
-        if(POKEMON_SPRITES.exists()) {
-            FileUtilities.recursiveDelete(POKEMON_SPRITES.toPath());
-        }
         if(!POKEMON_SPRITES.mkdir()) {
             throw new IOException();
         }
 
         retrieveResourceFiles(CSV_FOLDER, "csvFiles");
 
-        retrieveResourceFiles(POKEMON_SHAPES, "pokemonShapes");
-        retrieveResourceFiles(POKEMON_SPRITES, "pokemonSprites");
+        retrieveResourceFiles(POKEMON_SHAPES, "images/pokemonShapes");
+        retrieveResourceFiles(POKEMON_SPRITES, "images/pokemonSprites");
 
     }
 
