@@ -31,6 +31,13 @@ public enum PokeDexFileResources {
             throw new IOException();
         }
 
+        if(IMAGE_FOLDER.exists()) {
+            FileUtilities.recursiveDelete(CSV_FOLDER.toPath());
+        }
+        if(!IMAGE_FOLDER.mkdir()) {
+            throw new IOException();
+        }
+
         if(POKEMON_SHAPES.exists()) {
             FileUtilities.recursiveDelete(POKEMON_SHAPES.toPath());
         }
