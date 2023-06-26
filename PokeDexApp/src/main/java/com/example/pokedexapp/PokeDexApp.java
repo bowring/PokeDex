@@ -11,7 +11,7 @@ public class PokeDexApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(PokeDexApp.class.getResource("pokedex.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 400, 450);
+        Scene scene = new Scene(fxmlLoader.load(), 950, 700);
         stage.setTitle("PokeDex");
         stage.setScene(scene);
         stage.show();

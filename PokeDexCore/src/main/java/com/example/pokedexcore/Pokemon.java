@@ -1,11 +1,15 @@
 package com.example.pokedexcore;
 
+import org.cirdles.commons.util.ResourceExtractor;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
-import java.util.*;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class Pokemon implements Comparable<Pokemon> {
 
@@ -18,6 +22,9 @@ public class Pokemon implements Comparable<Pokemon> {
     private final String SHAPE;
     private final String COLOR;
     private final String DESCRIPTION;
+
+    //Resource Extractor
+    public static final ResourceExtractor POKEDEX_RESOURCE_EXTRACTOR = new ResourceExtractor(Pokemon.class);
 
     public Pokemon() {
         this("", "", "", 0.0, 0.0, "", "", "");

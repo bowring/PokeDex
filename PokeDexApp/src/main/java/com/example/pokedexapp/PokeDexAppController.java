@@ -1,5 +1,6 @@
 package com.example.pokedexapp;
 
+import com.example.pokedexcore.utilities.file.PokeDexFileResources;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -54,6 +55,13 @@ public class PokeDexAppController implements Initializable {
     public void initialize(URL location, ResourceBundle resources)  {
         Pokemon poke = new Pokemon();
 
+        try {
+            PokeDexFileResources.initLocalResources();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
         pokemon = startPokeDex();
 
         for (Pokemon p : pokemon) {
@@ -63,6 +71,7 @@ public class PokeDexAppController implements Initializable {
         initializePokemon();
 
         stage = new Stage();
+
     }
 
     /**
