@@ -63,6 +63,7 @@ META-INF/
 # !TripoliApp/src/main/resources/org/cirdles/tripoli/gui/images/*.png
 
 # data files
+PokeDexResource/
 
 # Developer docs
 

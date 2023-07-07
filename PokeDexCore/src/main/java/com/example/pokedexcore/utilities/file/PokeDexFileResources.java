@@ -50,7 +50,7 @@ public enum PokeDexFileResources {
     public static void retrieveResourceFiles(File resourceTargetFolder, String resourceFolderName)
             throws IOException {
 
-        Path listOfResourceFiles = POKEDEX_RESOURCE_EXTRACTOR.extractResourceAsPath(resourceFolderName + File.separator + "_listOfResourceFiles.txt");
+        Path listOfResourceFiles = POKEDEX_RESOURCE_EXTRACTOR.extractResourceAsPath(resourceFolderName + "/" + "_listOfResourceFiles.txt");
         if (resourceTargetFolder.exists()) {
             FileUtilities.recursiveDelete(resourceTargetFolder.toPath());
         }
